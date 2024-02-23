@@ -30,6 +30,6 @@ const LoginSchema = new mongoose.Schema({
 
 //collecting part
 
-const Collection = new mongoose.model("users",LoginSchema);
+const Collection = new mongoose.model("clients",LoginSchema);
 
 module.exports = Collection;

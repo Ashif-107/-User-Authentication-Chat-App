@@ -22,8 +22,8 @@ const express = require('express')
 const bcrypt = require('bcrypt');
 const app = express()
 const Collection = require('./config')
-app.use(express.json());
 
+app.use(express.json());
 app.set('views','./views')
 app.set('view engine','ejs')
 app.use(express.static('public'))
@@ -41,8 +41,9 @@ app.get("/signup",(req,res) =>{
 
 
 //register user
+ 
 
-app.post("/signup", async (req,res)=>{
+app.post("/signup",async(req,res)=>{
     const data = {
         name: req.body.username,
         password: req.body.password,
@@ -92,4 +93,7 @@ app.post("/login", async(req,res)=>{
 
 
 
-app.listen(5000)
+const port = 5000;
+app.listen(port,()=>{
+    console.log(`server runtime on port: ${port}`);
+})
