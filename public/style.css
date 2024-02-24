@@ -21,6 +21,7 @@ body{
     height: 100vh;
     flex-direction: column;
     background: url(./imgs/Screenshot\ 2024-02-20\ 204335.png)  no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container{

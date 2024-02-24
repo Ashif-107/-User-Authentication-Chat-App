@@ -1,7 +1,11 @@
 const socket = io('http://localhost:3000')
 
-const name = prompt('what is your name?');
-remsg('You Joined')
+
+
+socket.on('user-connec',(uname)=>{
+    remsg(`${uname} joined`)
+})
+
 socket.emit('new-user',name)
 
 socket.on('chat-message', (data) => {
