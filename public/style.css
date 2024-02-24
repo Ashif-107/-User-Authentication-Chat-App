@@ -97,6 +97,10 @@ button:hover {
     padding: 20px;
     border-radius: 10px 30px;
     border: 2px solid #f0f0f0 ;
+    position: relative;
+    width: 50%;
+    left: 50%;
+    word-wrap: break-word;
 }
 .get-message{
     color: aliceblue;
@@ -106,5 +110,31 @@ button:hover {
     padding: 20px;
     border-radius: 10px 30px;
     border: 2px solid aqua ;
+    width: 50%;
+    position: relative;
+    
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
+/* Scroll bar container */
+.msgs::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Scroll bar track */
+.msgs::-webkit-scrollbar-track {
+    background: rgba( 31, 38, 135, 0.37 );;
+}
+
+/* Scroll bar handle */
+.msgs::-webkit-scrollbar-thumb {
+    background: rgba( 242, 242, 242, 0.05 );
+    border-radius: 10px;
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+}
+
+.msgs::-webkit-scrollbar-thumb:hover {
+    background: rgba( 245, 246, 246, 0.1 );
+}   

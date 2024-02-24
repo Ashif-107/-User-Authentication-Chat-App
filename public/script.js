@@ -6,7 +6,7 @@ socket.on('user-connec',(uname)=>{
     remsg(`${uname} joined`)
 })
 
-socket.emit('new-user',name)
+
 
 socket.on('chat-message', (data) => {
     remsg(`${data.name}: ${data.msg}`)  
